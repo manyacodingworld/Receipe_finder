@@ -4,8 +4,11 @@ import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 import './index.css'
 
+// GitHub Pages requires basename for routing
+const basename = import.meta.env.BASE_URL
+
 createRoot(document.getElementById('root')).render(
-	<BrowserRouter>
+	<BrowserRouter basename={basename}>
 		<App />
 	</BrowserRouter>
 )
